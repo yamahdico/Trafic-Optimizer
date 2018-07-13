@@ -1,8 +1,8 @@
 {
-  "description": "Web Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
+  "description": "Internet Traffic Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
   "manifest_version": 2,
-  "name": "Web Optimizer",
-  "version": "0.4",
+  "name": "Traffic Optimizer",
+  "version": "0.5",
 
   "permissions": [
     "webRequest",
