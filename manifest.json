@@ -2,13 +2,12 @@
   "description": "Control Internet, Filter Websites, The optimal use of the Internet",
   "manifest_version": 2,
   "name": "Internet optimized",
-  "version": "1.0",
+  "version": "1.1",
 
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "<all_urls>",
-	"storage"
+    "<all_urls>"
   ],
  
   "icons": {
