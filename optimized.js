@@ -8,10 +8,10 @@ function Change_Situation() {
 	console.log(sessionStorage.getItem('active'));
 	if(sessionStorage.getItem('active')=='true'){
 	sessionStorage.setItem('active', 'false');	
-	browser.browserAction.setIcon({path: "icons/Tele2.ico"});
+	browser.browserAction.setIcon({path: "icons/lock.png"});
 	}else{
 	sessionStorage.setItem('active', 'true');
-	browser.browserAction.setIcon({path: "icons/Not_optimum.png"});
+	browser.browserAction.setIcon({path: "icons/unlock.png"});
 	}
 }
 
