@@ -1,8 +1,8 @@
 {
-  "description": "Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
+  "description": "Web Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
   "manifest_version": 2,
-  "name": "Web optimized",
-  "version": "0.3",
+  "name": "Web Optimizer",
+  "version": "0.4",
 
   "permissions": [
     "webRequest",
@@ -20,7 +20,7 @@
 },
 
   "background": {
-    "scripts": ["optimized.js"]
+    "scripts": ["optimizer.js"]
   }
   
 }
