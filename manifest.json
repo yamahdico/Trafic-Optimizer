@@ -1,8 +1,8 @@
 {
-  "description": "Control Internet, Filter Websites, The optimal use of the Internet",
+  "description": "Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
   "manifest_version": 2,
   "name": "Internet optimized",
-  "version": "1.1",
+  "version": "0.1",
 
   "permissions": [
     "webRequest",
@@ -11,12 +11,12 @@
   ],
  
   "icons": {
-    "48": "Not_optimum.png"
+    "48": "icons/Not_optimum.png"
   },
   
   "browser_action": {
-  "default_icon": "Not_optimum.png",
-  "default_title": "Internet optimized!"
+  "default_icon": "icons/Not_optimum.png",
+  "default_title": "icons/Internet optimized!"
 },
 
   "background": {

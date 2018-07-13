@@ -1,21 +1,17 @@
-console.log(sessionStorage.getItem('active'));
+// با کلید بر روی نوار ابزار متغیر اجرا می شود
+browser.browserAction.onClicked.addListener(Change_Situation);
 
-browser.browserAction.onClicked.addListener(cancel2);
-
-cancel2();
-
-//ارتباط با حافظه
-function cancel2() {
-	
+//اجرای اولیه برنامه
+Change_Situation();
+//ذخیره پر جلسه
+function Change_Situation() {
 	console.log(sessionStorage.getItem('active'));
-	
 	if(sessionStorage.getItem('active')=='true'){
 	sessionStorage.setItem('active', 'false');	
-	browser.browserAction.setIcon({path: "Tele2.ico"});
-	console.log("ssss");
+	browser.browserAction.setIcon({path: "icons/Tele2.ico"});
 	}else{
 	sessionStorage.setItem('active', 'true');
-	browser.browserAction.setIcon({path: "Not_optimum.png"});
+	browser.browserAction.setIcon({path: "icons/Not_optimum.png"});
 	}
 }
 
@@ -27,10 +23,8 @@ var pattern1 = ".ansarbank.com/ .antiplagiat.ru .bale.ai .eitaa.com/ .libgen.pw/
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
 	if(pattern1.indexOf(getDomain(requestDetails.url))<0 && sessionStorage.getItem('active') == 'false'){
-		 console.log("Canceling: " + getDomain(requestDetails.url));
+	//	 console.log("Canceling: " + getDomain(requestDetails.url));
 		 return {cancel: true};
-	}else{
-			 console.log("Allow: " + getDomain(requestDetails.url));
 	}
 }
 
@@ -42,6 +36,7 @@ browser.webRequest.onBeforeRequest.addListener(
   ["blocking"]
 );
 
+/// به دست آورن نام سایت
 function getHostName(url) {
     var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
     if (match != null && match.length > 2 && typeof match[2] === 'string' && match[2].length > 0) {
