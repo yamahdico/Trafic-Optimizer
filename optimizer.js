@@ -5,7 +5,7 @@ browser.browserAction.onClicked.addListener(Change_Situation);
 Change_Situation();
 //ذخیره پر جلسه
 function Change_Situation() {
-	console.log(sessionStorage.getItem('active'));
+//	console.log(sessionStorage.getItem('active'));
 	if(sessionStorage.getItem('active')=='true'){
 	sessionStorage.setItem('active', 'false');	
 	browser.browserAction.setIcon({path: "icons/lock.png"});
@@ -17,12 +17,16 @@ function Change_Situation() {
 
 // match pattern for the URLs to redirect
 var pattern = "<all_urls>";
-var pattern1 = ".ansarbank.com/ .antiplagiat.ru .bale.ai .eitaa.com/ .libgen.pw/ .mycdn.me .php.net/ .researchgate.net/ .rsl.ru .sfedu.ru/ centrinvest.ru dissercat.com facebook.com fadak.ir fbcdn.net google.com google.ru igap.net ok.ru skype.com tele2.ru translate.google.com translate.googleusercontent.com twirpx.com userapi.com vk.com vk-cdn.net vkuserlive.com vkuservideo.net whatsapp.com wikimedia.org wikipedia.org wiktionary.org aaatec.academia.edu cdn.reverso.net/ context.reverso.net/ dictionary.abadis.ir/ elibrary.ru/ fromtexttospeech.com/ journals.sndu.ac.ir/ linguee.ru/ panel.hiweb.ir/ vajehyab.com/ .amazon.com www.ldoceonline.com/";
+
+chrome.storage.local.get("active", items=>{
+var Whitelist = items.active;
+});
+
 
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
 function cancel(requestDetails) {
-	if(pattern1.indexOf(getDomain(requestDetails.url))<0 && sessionStorage.getItem('active') == 'false'){
+	if(Whitelist.indexOf(getDomain(requestDetails.url))<0 && sessionStorage.getItem('active') == 'false'){
 	//	 console.log("Canceling: " + getDomain(requestDetails.url));
 		 return {cancel: true};
 	}

@@ -1,26 +1,26 @@
 {
-  "description": "Internet Traffic Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
-  "manifest_version": 2,
-  "name": "Traffic Optimizer",
-  "version": "0.5",
-
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "<all_urls>"
-  ],
- 
-  "icons": {
-    "48": "icons/unlock.png"
-  },
-  
-  "browser_action": {
-  "default_icon": "icons/unlock.png",
-  "default_title": "icons/Internet optimized!"
-},
-
-  "background": {
-    "scripts": ["optimizer.js"]
-  }
-  
+	"description": "Internet Traffic Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
+	"manifest_version": 2,
+	"name": "Traffic Optimizer",
+	"version": "0.6",
+	"permissions": [
+	"webRequest",
+	"webRequestBlocking",
+	"<all_urls>",
+	"storage"
+	],
+	"options_ui": {
+		"page": "options.html",
+		"browser_style": true
+	},
+	"icons": {
+		"48": "icons/unlock.png"
+	},
+	"browser_action": {
+		"default_icon": "icons/unlock.png",
+		"default_title": "icons/Internet optimized!"
+	},
+	"background": {
+		"scripts": ["optimizer.js"]
+	}
 }
