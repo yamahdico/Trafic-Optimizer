@@ -2,6 +2,10 @@
 	"description": "Internet Traffic Optimizer, Web Filter, Blacklist unwanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
 	"manifest_version": 2,
 	"name": "Traffic Optimizer",
+	    "developer": {
+        "name": "Seyed Mahdi Soheili Moghadam",
+        "url": "https://github.com/yamahdico/"
+      },
 	"version": "0.6",
 	"permissions": [
 	"webRequest",
