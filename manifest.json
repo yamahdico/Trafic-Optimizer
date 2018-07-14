@@ -7,7 +7,7 @@
         "url": "https://github.com/yamahdico/"
 		},
 		
-	"version": "0.6",
+	"version": "0.6.2",
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
