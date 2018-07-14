@@ -18,17 +18,16 @@ function Change_Situation() {
 // match pattern for the URLs to redirect
 var pattern = "<all_urls>";
 
-chrome.storage.local.get("active", items=>{
-var Whitelist = items.active;
-});
-
-
 // cancel function returns an object
 // which contains a property `cancel` set to `true`
+var Whitelist;
 function cancel(requestDetails) {
+	chrome.storage.local.get("active", items=>{
+	Whitelist = items.active;
+	
+	});
 	if(Whitelist.indexOf(getDomain(requestDetails.url))<0 && sessionStorage.getItem('active') == 'false'){
-	//	 console.log("Canceling: " + getDomain(requestDetails.url));
-		 return {cancel: true};
+		return {cancel: true};
 	}
 }
 

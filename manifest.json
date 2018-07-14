@@ -5,25 +5,30 @@
 	    "developer": {
         "name": "Seyed Mahdi Soheili Moghadam",
         "url": "https://github.com/yamahdico/"
-      },
+		},
+		
 	"version": "0.6",
 	"permissions": [
-	"webRequest",
-	"webRequestBlocking",
-	"<all_urls>",
-	"storage"
-	],
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"storage"
+		],
+		
 	"options_ui": {
 		"page": "options.html",
 		"browser_style": true
 	},
+	
 	"icons": {
 		"48": "icons/unlock.png"
 	},
+	
 	"browser_action": {
 		"default_icon": "icons/unlock.png",
 		"default_title": "icons/Internet optimized!"
 	},
+	
 	"background": {
 		"scripts": ["optimizer.js"]
 	}
