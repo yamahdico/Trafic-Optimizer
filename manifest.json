@@ -21,7 +21,7 @@
 	},
 	
 	"icons": {
-		"48": "icons/unlock.png"
+		"512": "icons/unlock.png"
 	},
 	
 	"browser_action": {
