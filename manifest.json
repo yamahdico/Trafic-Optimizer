@@ -1,5 +1,5 @@
 {
-	"description": "Internet Traffic Optimizer, Web Filter, Whitelist wanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
+	"description": "This extention blocks all websites(any URL) except domains that user permits in options. Internet Traffic Optimizer, Web Filter, Whitelist wanted websites, Control Internet, Filter Websites, The optimal use of the Internet, URL Blocker",
 	"manifest_version": 2,
 	"name": "Traffic Optimizer",
 	    "developer": {
@@ -7,7 +7,7 @@
         "url": "https://github.com/yamahdico/"
 		},
 		
-	"version": "0.6.3",
+	"version": "0.6.4",
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
